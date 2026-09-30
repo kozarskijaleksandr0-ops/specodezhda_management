@@ -1,0 +1,10 @@
+D:\Курсовая\specodezhda_management-main\target\debug\deps\polling-d6e283f5f810ef32.d: C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\lib.rs C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\os.rs C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\os\iocp.rs C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\iocp\mod.rs C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\iocp\afd.rs C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\iocp\port.rs
+
+D:\Курсовая\specodezhda_management-main\target\debug\deps\libpolling-d6e283f5f810ef32.rmeta: C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\lib.rs C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\os.rs C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\os\iocp.rs C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\iocp\mod.rs C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\iocp\afd.rs C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\iocp\port.rs
+
+C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\lib.rs:
+C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\os.rs:
+C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\os\iocp.rs:
+C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\iocp\mod.rs:
+C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\iocp\afd.rs:
+C:\Users\stud\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\polling-3.11.0\src\iocp\port.rs:
