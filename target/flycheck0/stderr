@@ -1,0 +1,5 @@
+error: key with no value, expected `=`
+  --> Cargo.toml:28:9
+   |
+28 | <<<<<<< HEAD
+   |         ^

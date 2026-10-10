@@ -1039,6 +1039,8 @@ dependencies = [
  "async-sqlite",
  "ohkami",
  "rusqlite",
+ "serde",
+ "serde_json",
  "smol",
  "time",
  "uuid",
