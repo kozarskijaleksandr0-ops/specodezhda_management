@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-use ohkami::{Response, Status};
-
-pub async fn add_poluchenie() -> Response {
-    let mut response = Response::new(Status::OK);
-    response.set_text("added poluchenie");
-    response
-}
-
-pub async fn get_poluchenie() -> Response {
-    let mut response = Response::new(Status::OK);
-    response.set_text("got poluchenie");
-    response
-}
-
-pub async fn update_poluchenie() -> Response {
-    let mut response = Response::new(Status::OK);
-    response.set_text("updated poluchenie");
-    response
-}
-
-pub async fn remove_poluchenie() -> Response {
-    let mut response = Response::new(Status::OK);
-    response.set_text("removed poluchenie");
-    response
-}
-=======
 use ohkami::{Json, Response};
 use ohkami::fang::Context;
 use ohkami::claw::Query;
@@ -36,7 +9,7 @@ use time::UtcDateTime;
 use crate::context::RequestContext;
 use crate::contracts::PoluchenieStorage;
 use crate::contracts_impl::PoluchenieSqliteStorage;
-use crate::models::Poluchenie;
+use crate::models::{EntityId, Poluchenie};
 
 use super::payloads::{AddPolucheniePayload, PoluchenieResponse, ErrorResponse};
 
@@ -47,17 +20,16 @@ pub struct PoluchenieQuery {
     pub data_polucheniya: String,
 }
 
-//POST
 pub async fn add_poluchenie(
     Json(payload): Json<AddPolucheniePayload>,
     Context(context): Context<'_, RequestContext>,
 ) -> Response {
-    let Ok(rabotnik_id) = Uuid::parse_str(&payload.rabotnik_id) else {
+    let Ok(rabotnik_uuid) = Uuid::parse_str(&payload.rabotnik_id) else {
         return Response::BadRequest().with_json(ErrorResponse {
             message: "invalid rabotnik_id".to_string(),
         });
     };
-    let Ok(specodezhda_id) = Uuid::parse_str(&payload.specodezhda_id) else {
+    let Ok(specodezhda_uuid) = Uuid::parse_str(&payload.specodezhda_id) else {
         return Response::BadRequest().with_json(ErrorResponse {
             message: "invalid specodezhda_id".to_string(),
         });
@@ -68,42 +40,45 @@ pub async fn add_poluchenie(
         });
     };
 
-    let rabotnik_stub = crate::models::Rabotnik {
-        id: rabotnik_id,
-        fio: String::new(),
-        dolzhnost: String::new(),
-        skidka: 0.0,
-        ceh_id: Uuid::nil(),
-        created_at: UtcDateTime::now(),
-        updated_at: None,
-        deleted_at: None,
+    let rabotnik_id = match EntityId::create(rabotnik_uuid) {
+        Ok(id) => id,
+        Err(e) => {
+            return Response::BadRequest().with_json(ErrorResponse {
+                message: format!("rabotnik_id error: {:?}", e),
+            })
+        }
     };
-    let specodezhda_stub = crate::models::Specodezhda {
-        id: specodezhda_id,
-        vid: String::new(),
-        srok_noski: 0,
-        stoimost: 0.0,
-        created_at: UtcDateTime::now(),
-        updated_at: None,
-        deleted_at: None,
+    let specodezhda_id = match EntityId::create(specodezhda_uuid) {
+        Ok(id) => id,
+        Err(e) => {
+            return Response::BadRequest().with_json(ErrorResponse {
+                message: format!("specodezhda_id error: {:?}", e),
+            })
+        }
     };
 
-    let poluchenie = Poluchenie::create_new(
-        &rabotnik_stub,
-        &specodezhda_stub,
+    let poluchenie = match Poluchenie::create_new(
+        rabotnik_id,
+        specodezhda_id,
         data_polucheniya,
         payload.podpis,
-    );
+    ) {
+        Ok(p) => p,
+        Err(e) => {
+            return Response::BadRequest().with_json(ErrorResponse {
+                message: format!("validation error: {:?}", e),
+            });
+        }
+    };
 
     let response_payload = PoluchenieResponse {
-        rabotnik_id: poluchenie.rabotnik_id.to_string(),
-        specodezhda_id: poluchenie.specodezhda_id.to_string(),
+        rabotnik_id: poluchenie.rabotnik_id.value().to_string(),
+        specodezhda_id: poluchenie.specodezhda_id.value().to_string(),
         data_polucheniya: poluchenie.data_polucheniya.to_string(),
-        podpis: poluchenie.podpis.clone(),
+        podpis: poluchenie.podpis.value().to_string(),
     };
 
     let storage = PoluchenieSqliteStorage::from_pool((*context.connection_pool).clone());
-
     match storage.add(poluchenie).await {
         Ok(()) => Response::Created().with_json(response_payload),
         Err(error) => {
@@ -115,7 +90,6 @@ pub async fn add_poluchenie(
     }
 }
 
-//GET
 pub async fn get_poluchenie(
     Query(query): Query<PoluchenieQuery>,
     Context(context): Context<'_, RequestContext>,
@@ -137,13 +111,12 @@ pub async fn get_poluchenie(
     };
 
     let storage = PoluchenieSqliteStorage::from_pool((*context.connection_pool).clone());
-
     match storage.get(rabotnik_id, specodezhda_id, data_polucheniya).await {
         Ok(Some(p)) => Response::OK().with_json(PoluchenieResponse {
-            rabotnik_id: p.rabotnik_id.to_string(),
-            specodezhda_id: p.specodezhda_id.to_string(),
+            rabotnik_id: p.rabotnik_id.value().to_string(),
+            specodezhda_id: p.specodezhda_id.value().to_string(),
             data_polucheniya: p.data_polucheniya.to_string(),
-            podpis: p.podpis,
+            podpis: p.podpis.value().to_string(),
         }),
         Ok(None) => Response::NotFound().with_json(ErrorResponse {
             message: "poluchenie not found".to_string(),
@@ -157,7 +130,6 @@ pub async fn get_poluchenie(
     }
 }
 
-//DELETE
 pub async fn remove_poluchenie(
     Query(query): Query<PoluchenieQuery>,
     Context(context): Context<'_, RequestContext>,
@@ -179,7 +151,6 @@ pub async fn remove_poluchenie(
     };
 
     let storage = PoluchenieSqliteStorage::from_pool((*context.connection_pool).clone());
-
     let existing = match storage.get(rabotnik_id, specodezhda_id, data_polucheniya).await {
         Ok(Some(p)) => p,
         Ok(None) => {
@@ -205,4 +176,3 @@ pub async fn remove_poluchenie(
         }
     }
 }
->>>>>>> dcb3657 (7)

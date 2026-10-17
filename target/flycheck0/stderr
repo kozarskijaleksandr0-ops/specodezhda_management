@@ -1,5 +1,290 @@
-error: key with no value, expected `=`
-  --> Cargo.toml:28:9
-   |
-28 | <<<<<<< HEAD
-   |         ^
+   0.279602900s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 13436682360.191488800s > 13436423286.642071000s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.23"
+   0.295589400s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `futures_macro` is newer than we are 13436682367.982056600s > 13436423289.159938700s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.34"
+   0.306944600s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 13436682363.540489400s > 13436423287.022635500s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libsqlite3-sys-0.38.2"
+   0.315557900s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `time_macros` is newer than we are 13436682362.958487200s > 13436423290.458696900s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\time-0.3.55"
+   0.317832300s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 13436682362.222492800s > 13436423286.938074700s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.4.3"
+   0.326217500s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 13436682360.362489800s > 13436423289.156657600s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\generic-array-0.14.7"
+   0.330332100s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 13436682360.746494700s > 13436423288.061044000s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\mime_guess-2.0.5"
+   0.332031900s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 13436682362.047487800s > 13436423289.156657600s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_core-1.0.229"
+   0.333151000s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 13436682362.189491700s > 13436423291.392421600s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.229"
+   0.337134300s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 13436682360.376490500s > 13436423287.064906000s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zmij-1.0.23"
+   0.337200900s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 13436682361.224489600s > 13436423291.392421600s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.151"
+   0.348014900s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 13436682360.724493400s > 13436423291.975823900s "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustix-1.1.5"
+   0.348925800s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: fingerprint error for specodezhda_management v0.1.0 (E:\specodezhda_management)/Check { test: false }/TargetInner { name: "specodezhda_management", doc: true, ..: with_path("E:\\specodezhda_management\\src\\main.rs", Edition2024) }
+   0.348977700s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\specodezhda_management\target\debug\.fingerprint\specodezhda_management-dfcfb6e7713e3a56\bin-specodezhda_management`
+
+Caused by:
+    Не удается найти указанный файл. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_libgit2_prerelease
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: git_midx_writer_dump
+  16: git_filter_source_repo
+  17: git_midx_writer_dump
+  18: BaseThreadInitThunk
+  19: RtlUserThreadStart
+   0.371918000s  INFO prepare_target{force=false package_id=async-lock v3.4.2 target="async_lock"}: cargo::core::compiler::fingerprint: fingerprint dirty for async-lock v3.4.2/Check { test: false }/TargetInner { ..: lib_target("async_lock", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-lock-3.4.2\\src\\lib.rs", Edition2021) }
+   0.371971500s  INFO prepare_target{force=false package_id=async-lock v3.4.2 target="async_lock"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.375759600s  INFO prepare_target{force=false package_id=event-listener v5.4.2 target="event_listener"}: cargo::core::compiler::fingerprint: fingerprint dirty for event-listener v5.4.2/Check { test: false }/TargetInner { benched: false, ..: lib_target("event_listener", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\event-listener-5.4.2\\src\\lib.rs", Edition2021) }
+   0.375798200s  INFO prepare_target{force=false package_id=event-listener v5.4.2 target="event_listener"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.379171400s  INFO prepare_target{force=false package_id=parking v2.2.1 target="parking"}: cargo::core::compiler::fingerprint: fingerprint dirty for parking v2.2.1/Check { test: false }/TargetInner { ..: lib_target("parking", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking-2.2.1\\src\\lib.rs", Edition2018) }
+   0.379218000s  INFO prepare_target{force=false package_id=parking v2.2.1 target="parking"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.383383100s  INFO prepare_target{force=false package_id=pin-project-lite v0.2.17 target="pin_project_lite"}: cargo::core::compiler::fingerprint: fingerprint dirty for pin-project-lite v0.2.17/Check { test: false }/TargetInner { doc_scrape_examples: Disabled, ..: lib_target("pin_project_lite", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.17\\src\\lib.rs", Edition2018) }
+   0.383418300s  INFO prepare_target{force=false package_id=pin-project-lite v0.2.17 target="pin_project_lite"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.387354000s  INFO prepare_target{force=false package_id=event-listener-strategy v0.5.4 target="event_listener_strategy"}: cargo::core::compiler::fingerprint: fingerprint dirty for event-listener-strategy v0.5.4/Check { test: false }/TargetInner { ..: lib_target("event_listener_strategy", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\event-listener-strategy-0.5.4\\src\\lib.rs", Edition2021) }
+   0.387390900s  INFO prepare_target{force=false package_id=event-listener-strategy v0.5.4 target="event_listener_strategy"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.404649600s  INFO prepare_target{force=false package_id=async-sqlite v0.6.0 target="async_sqlite"}: cargo::core::compiler::fingerprint: fingerprint dirty for async-sqlite v0.6.0/Check { test: false }/TargetInner { ..: lib_target("async_sqlite", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-sqlite-0.6.0\\src\\lib.rs", Edition2021) }
+   0.404688100s  INFO prepare_target{force=false package_id=async-sqlite v0.6.0 target="async_sqlite"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.408390100s  INFO prepare_target{force=false package_id=crossbeam-channel v0.5.17 target="crossbeam_channel"}: cargo::core::compiler::fingerprint: fingerprint dirty for crossbeam-channel v0.5.17/Check { test: false }/TargetInner { ..: lib_target("crossbeam_channel", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-channel-0.5.17\\src\\lib.rs", Edition2021) }
+   0.408431600s  INFO prepare_target{force=false package_id=crossbeam-channel v0.5.17 target="crossbeam_channel"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.412100300s  INFO prepare_target{force=false package_id=crossbeam-utils v0.8.23 target="crossbeam_utils"}: cargo::core::compiler::fingerprint: fingerprint dirty for crossbeam-utils v0.8.23/Check { test: false }/TargetInner { ..: lib_target("crossbeam_utils", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.23\\src\\lib.rs", Edition2021) }
+   0.412138800s  INFO prepare_target{force=false package_id=crossbeam-utils v0.8.23 target="crossbeam_utils"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.418466000s  INFO prepare_target{force=false package_id=futures-channel v0.3.34 target="futures_channel"}: cargo::core::compiler::fingerprint: fingerprint dirty for futures-channel v0.3.34/Check { test: false }/TargetInner { ..: lib_target("futures_channel", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-channel-0.3.34\\src\\lib.rs", Edition2018) }
+   0.418507800s  INFO prepare_target{force=false package_id=futures-channel v0.3.34 target="futures_channel"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.421993300s  INFO prepare_target{force=false package_id=futures-core v0.3.34 target="futures_core"}: cargo::core::compiler::fingerprint: fingerprint dirty for futures-core v0.3.34/Check { test: false }/TargetInner { ..: lib_target("futures_core", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.34\\src\\lib.rs", Edition2018) }
+   0.422027900s  INFO prepare_target{force=false package_id=futures-core v0.3.34 target="futures_core"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.428035900s  INFO prepare_target{force=false package_id=futures-util v0.3.34 target="futures_util"}: cargo::core::compiler::fingerprint: fingerprint dirty for futures-util v0.3.34/Check { test: false }/TargetInner { ..: lib_target("futures_util", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.34\\src\\lib.rs", Edition2018) }
+   0.428079800s  INFO prepare_target{force=false package_id=futures-util v0.3.34 target="futures_util"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.431985600s  INFO prepare_target{force=false package_id=futures-io v0.3.34 target="futures_io"}: cargo::core::compiler::fingerprint: fingerprint dirty for futures-io v0.3.34/Check { test: false }/TargetInner { ..: lib_target("futures_io", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-io-0.3.34\\src\\lib.rs", Edition2018) }
+   0.432020600s  INFO prepare_target{force=false package_id=futures-io v0.3.34 target="futures_io"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.442139600s  INFO prepare_target{force=false package_id=futures-task v0.3.34 target="futures_task"}: cargo::core::compiler::fingerprint: fingerprint dirty for futures-task v0.3.34/Check { test: false }/TargetInner { ..: lib_target("futures_task", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.34\\src\\lib.rs", Edition2018) }
+   0.442175800s  INFO prepare_target{force=false package_id=futures-task v0.3.34 target="futures_task"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.446026600s  INFO prepare_target{force=false package_id=memchr v2.8.3 target="memchr"}: cargo::core::compiler::fingerprint: fingerprint dirty for memchr v2.8.3/Check { test: false }/TargetInner { benched: false, ..: lib_target("memchr", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\memchr-2.8.3\\src\\lib.rs", Edition2021) }
+   0.446062400s  INFO prepare_target{force=false package_id=memchr v2.8.3 target="memchr"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.449608600s  INFO prepare_target{force=false package_id=slab v0.4.12 target="slab"}: cargo::core::compiler::fingerprint: fingerprint dirty for slab v0.4.12/Check { test: false }/TargetInner { ..: lib_target("slab", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\slab-0.4.12\\src\\lib.rs", Edition2018) }
+   0.449643500s  INFO prepare_target{force=false package_id=slab v0.4.12 target="slab"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.461988500s  INFO prepare_target{force=false package_id=rusqlite v0.40.2 target="rusqlite"}: cargo::core::compiler::fingerprint: fingerprint dirty for rusqlite v0.40.2/Check { test: false }/TargetInner { ..: lib_target("rusqlite", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rusqlite-0.40.2\\src\\lib.rs", Edition2021) }
+   0.462032300s  INFO prepare_target{force=false package_id=rusqlite v0.40.2 target="rusqlite"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.465767800s  INFO prepare_target{force=false package_id=bitflags v2.13.2 target="bitflags"}: cargo::core::compiler::fingerprint: fingerprint dirty for bitflags v2.13.2/Check { test: false }/TargetInner { ..: lib_target("bitflags", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bitflags-2.13.2\\src\\lib.rs", Edition2021) }
+   0.465806700s  INFO prepare_target{force=false package_id=bitflags v2.13.2 target="bitflags"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.469384800s  INFO prepare_target{force=false package_id=fallible-iterator v0.3.0 target="fallible_iterator"}: cargo::core::compiler::fingerprint: fingerprint dirty for fallible-iterator v0.3.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("fallible_iterator", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fallible-iterator-0.3.0\\src\\lib.rs", Edition2018) }
+   0.469424900s  INFO prepare_target{force=false package_id=fallible-iterator v0.3.0 target="fallible_iterator"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.473397300s  INFO prepare_target{force=false package_id=fallible-streaming-iterator v0.1.9 target="fallible_streaming_iterator"}: cargo::core::compiler::fingerprint: fingerprint dirty for fallible-streaming-iterator v0.1.9/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("fallible_streaming_iterator", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fallible-streaming-iterator-0.1.9\\src\\lib.rs", Edition2015) }
+   0.473443100s  INFO prepare_target{force=false package_id=fallible-streaming-iterator v0.1.9 target="fallible_streaming_iterator"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.477239600s  INFO prepare_target{force=false package_id=hashlink v0.12.2 target="hashlink"}: cargo::core::compiler::fingerprint: fingerprint dirty for hashlink v0.12.2/Check { test: false }/TargetInner { ..: lib_target("hashlink", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hashlink-0.12.2\\src\\lib.rs", Edition2024) }
+   0.477283200s  INFO prepare_target{force=false package_id=hashlink v0.12.2 target="hashlink"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.480763400s  INFO prepare_target{force=false package_id=hashbrown v0.17.1 target="hashbrown"}: cargo::core::compiler::fingerprint: fingerprint dirty for hashbrown v0.17.1/Check { test: false }/TargetInner { ..: lib_target("hashbrown", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hashbrown-0.17.1\\src\\lib.rs", Edition2024) }
+   0.480802400s  INFO prepare_target{force=false package_id=hashbrown v0.17.1 target="hashbrown"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.484423600s  INFO prepare_target{force=false package_id=foldhash v0.2.0 target="foldhash"}: cargo::core::compiler::fingerprint: fingerprint dirty for foldhash v0.2.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("foldhash", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\foldhash-0.2.0\\src\\lib.rs", Edition2021) }
+   0.484463800s  INFO prepare_target{force=false package_id=foldhash v0.2.0 target="foldhash"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.494910000s  INFO prepare_target{force=false package_id=libsqlite3-sys v0.38.2 target="libsqlite3_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for libsqlite3-sys v0.38.2/Check { test: false }/TargetInner { ..: lib_target("libsqlite3_sys", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libsqlite3-sys-0.38.2\\src\\lib.rs", Edition2021) }
+   0.494947100s  INFO prepare_target{force=false package_id=libsqlite3-sys v0.38.2 target="libsqlite3_sys"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.503170800s  INFO prepare_target{force=false package_id=smallvec v1.16.2 target="smallvec"}: cargo::core::compiler::fingerprint: fingerprint dirty for smallvec v1.16.2/Check { test: false }/TargetInner { ..: lib_target("smallvec", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\smallvec-1.16.2\\src\\lib.rs", Edition2018) }
+   0.503210500s  INFO prepare_target{force=false package_id=smallvec v1.16.2 target="smallvec"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.512689400s  INFO prepare_target{force=false package_id=time v0.3.55 target="time"}: cargo::core::compiler::fingerprint: fingerprint dirty for time v0.3.55/Check { test: false }/TargetInner { benched: false, ..: lib_target("time", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\time-0.3.55\\src\\lib.rs", Edition2024) }
+   0.512740100s  INFO prepare_target{force=false package_id=time v0.3.55 target="time"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.516385000s  INFO prepare_target{force=false package_id=deranged v0.5.8 target="deranged"}: cargo::core::compiler::fingerprint: fingerprint dirty for deranged v0.5.8/Check { test: false }/TargetInner { ..: lib_target("deranged", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\deranged-0.5.8\\src\\lib.rs", Edition2021) }
+   0.516424600s  INFO prepare_target{force=false package_id=deranged v0.5.8 target="deranged"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.521629500s  INFO prepare_target{force=false package_id=num-conv v0.2.2 target="num_conv"}: cargo::core::compiler::fingerprint: fingerprint dirty for num-conv v0.2.2/Check { test: false }/TargetInner { ..: lib_target("num_conv", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-conv-0.2.2\\src\\lib.rs", Edition2021) }
+   0.521676600s  INFO prepare_target{force=false package_id=num-conv v0.2.2 target="num_conv"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.525447600s  INFO prepare_target{force=false package_id=powerfmt v0.2.0 target="powerfmt"}: cargo::core::compiler::fingerprint: fingerprint dirty for powerfmt v0.2.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("powerfmt", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\powerfmt-0.2.0\\src\\lib.rs", Edition2021) }
+   0.525496600s  INFO prepare_target{force=false package_id=powerfmt v0.2.0 target="powerfmt"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.529057600s  INFO prepare_target{force=false package_id=time-core v0.1.9 target="time_core"}: cargo::core::compiler::fingerprint: fingerprint dirty for time-core v0.1.9/Check { test: false }/TargetInner { ..: lib_target("time_core", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\time-core-0.1.9\\src\\lib.rs", Edition2024) }
+   0.529097700s  INFO prepare_target{force=false package_id=time-core v0.1.9 target="time_core"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.543511600s  INFO prepare_target{force=false package_id=uuid v1.26.1 target="uuid"}: cargo::core::compiler::fingerprint: fingerprint dirty for uuid v1.26.1/Check { test: false }/TargetInner { ..: lib_target("uuid", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\uuid-1.26.1\\src\\lib.rs", Edition2021) }
+   0.543557600s  INFO prepare_target{force=false package_id=uuid v1.26.1 target="uuid"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.547849300s  INFO prepare_target{force=false package_id=getrandom v0.4.3 target="getrandom"}: cargo::core::compiler::fingerprint: fingerprint dirty for getrandom v0.4.3/Check { test: false }/TargetInner { ..: lib_target("getrandom", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.4.3\\src\\lib.rs", Edition2024) }
+   0.547892900s  INFO prepare_target{force=false package_id=getrandom v0.4.3 target="getrandom"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.551178000s  INFO prepare_target{force=false package_id=cfg-if v1.0.5 target="cfg_if"}: cargo::core::compiler::fingerprint: fingerprint dirty for cfg-if v1.0.5/Check { test: false }/TargetInner { ..: lib_target("cfg_if", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.5\\src\\lib.rs", Edition2018) }
+   0.551217300s  INFO prepare_target{force=false package_id=cfg-if v1.0.5 target="cfg_if"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.557805500s  INFO prepare_target{force=false package_id=ohkami v0.24.9 target="ohkami"}: cargo::core::compiler::fingerprint: fingerprint dirty for ohkami v0.24.9/Check { test: false }/TargetInner { ..: lib_target("ohkami", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ohkami-0.24.9\\src\\lib.rs", Edition2024) }
+   0.557852900s  INFO prepare_target{force=false package_id=ohkami v0.24.9 target="ohkami"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.561876700s  INFO prepare_target{force=false package_id=base64 v0.22.1 target="base64"}: cargo::core::compiler::fingerprint: fingerprint dirty for base64 v0.22.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("base64", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\base64-0.22.1\\src\\lib.rs", Edition2018) }
+   0.561922600s  INFO prepare_target{force=false package_id=base64 v0.22.1 target="base64"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.565266500s  INFO prepare_target{force=false package_id=byte_reader v3.1.1 target="byte_reader"}: cargo::core::compiler::fingerprint: fingerprint dirty for byte_reader v3.1.1/Check { test: false }/TargetInner { ..: lib_target("byte_reader", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\byte_reader-3.1.1\\src\\lib.rs", Edition2021) }
+   0.565304100s  INFO prepare_target{force=false package_id=byte_reader v3.1.1 target="byte_reader"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.569353000s  INFO prepare_target{force=false package_id=ctrlc v3.5.2 target="ctrlc"}: cargo::core::compiler::fingerprint: fingerprint dirty for ctrlc v3.5.2/Check { test: false }/TargetInner { ..: lib_target("ctrlc", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ctrlc-3.5.2\\src\\lib.rs", Edition2021) }
+   0.569390800s  INFO prepare_target{force=false package_id=ctrlc v3.5.2 target="ctrlc"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.582166200s  INFO prepare_target{force=false package_id=windows-sys v0.61.2 target="windows_sys"}: cargo::core::compiler::fingerprint: fingerprint dirty for windows-sys v0.61.2/Check { test: false }/TargetInner { tested: false, doctest: false, ..: lib_target("windows_sys", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.61.2\\src\\lib.rs", Edition2021) }
+   0.582206500s  INFO prepare_target{force=false package_id=windows-sys v0.61.2 target="windows_sys"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.586676000s  INFO prepare_target{force=false package_id=windows-link v0.2.1 target="windows_link"}: cargo::core::compiler::fingerprint: fingerprint dirty for windows-link v0.2.1/Check { test: false }/TargetInner { ..: lib_target("windows_link", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-link-0.2.1\\src\\lib.rs", Edition2021) }
+   0.586717900s  INFO prepare_target{force=false package_id=windows-link v0.2.1 target="windows_link"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.590166200s  INFO prepare_target{force=false package_id=hmac v0.12.1 target="hmac"}: cargo::core::compiler::fingerprint: fingerprint dirty for hmac v0.12.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("hmac", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hmac-0.12.1\\src\\lib.rs", Edition2018) }
+   0.590202900s  INFO prepare_target{force=false package_id=hmac v0.12.1 target="hmac"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.599029800s  INFO prepare_target{force=false package_id=digest v0.10.7 target="digest"}: cargo::core::compiler::fingerprint: fingerprint dirty for digest v0.10.7/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("digest", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.10.7\\src\\lib.rs", Edition2018) }
+   0.599078300s  INFO prepare_target{force=false package_id=digest v0.10.7 target="digest"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.604214800s  INFO prepare_target{force=false package_id=block-buffer v0.10.4 target="block_buffer"}: cargo::core::compiler::fingerprint: fingerprint dirty for block-buffer v0.10.4/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("block_buffer", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.10.4\\src\\lib.rs", Edition2018) }
+   0.604254700s  INFO prepare_target{force=false package_id=block-buffer v0.10.4 target="block_buffer"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.607830600s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="generic_array"}: cargo::core::compiler::fingerprint: fingerprint dirty for generic-array v0.14.7/Check { test: false }/TargetInner { ..: lib_target("generic_array", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\generic-array-0.14.7\\src\\lib.rs", Edition2015) }
+   0.607871400s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="generic_array"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.612493400s  INFO prepare_target{force=false package_id=typenum v1.20.1 target="typenum"}: cargo::core::compiler::fingerprint: fingerprint dirty for typenum v1.20.1/Check { test: false }/TargetInner { ..: lib_target("typenum", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.20.1\\src\\lib.rs", Edition2018) }
+   0.612533800s  INFO prepare_target{force=false package_id=typenum v1.20.1 target="typenum"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.616158000s  INFO prepare_target{force=false package_id=crypto-common v0.1.7 target="crypto_common"}: cargo::core::compiler::fingerprint: fingerprint dirty for crypto-common v0.1.7/Check { test: false }/TargetInner { ..: lib_target("crypto_common", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.1.7\\src\\lib.rs", Edition2018) }
+   0.616202000s  INFO prepare_target{force=false package_id=crypto-common v0.1.7 target="crypto_common"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.619537000s  INFO prepare_target{force=false package_id=subtle v2.6.1 target="subtle"}: cargo::core::compiler::fingerprint: fingerprint dirty for subtle v2.6.1/Check { test: false }/TargetInner { ..: lib_target("subtle", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\src\\lib.rs", Edition2018) }
+   0.619576000s  INFO prepare_target{force=false package_id=subtle v2.6.1 target="subtle"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.623605400s  INFO prepare_target{force=false package_id=mime_guess v2.0.5 target="mime_guess"}: cargo::core::compiler::fingerprint: fingerprint dirty for mime_guess v2.0.5/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("mime_guess", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\mime_guess-2.0.5\\src\\lib.rs", Edition2015) }
+   0.623653400s  INFO prepare_target{force=false package_id=mime_guess v2.0.5 target="mime_guess"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.627510600s  INFO prepare_target{force=false package_id=mime v0.3.17 target="mime"}: cargo::core::compiler::fingerprint: fingerprint dirty for mime v0.3.17/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("mime", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\mime-0.3.17\\src\\lib.rs", Edition2015) }
+   0.627549900s  INFO prepare_target{force=false package_id=mime v0.3.17 target="mime"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.632143400s  INFO prepare_target{force=false package_id=unicase v2.9.0 target="unicase"}: cargo::core::compiler::fingerprint: fingerprint dirty for unicase v2.9.0/Check { test: false }/TargetInner { ..: lib_target("unicase", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicase-2.9.0\\src\\lib.rs", Edition2018) }
+   0.632181400s  INFO prepare_target{force=false package_id=unicase v2.9.0 target="unicase"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.636241600s  INFO prepare_target{force=false package_id=ohkami_lib v0.24.9 target="ohkami_lib"}: cargo::core::compiler::fingerprint: fingerprint dirty for ohkami_lib v0.24.9/Check { test: false }/TargetInner { ..: lib_target("ohkami_lib", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ohkami_lib-0.24.9\\src\\lib.rs", Edition2024) }
+   0.636280700s  INFO prepare_target{force=false package_id=ohkami_lib v0.24.9 target="ohkami_lib"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.640156500s  INFO prepare_target{force=false package_id=percent-encoding v2.3.2 target="percent_encoding"}: cargo::core::compiler::fingerprint: fingerprint dirty for percent-encoding v2.3.2/Check { test: false }/TargetInner { ..: lib_target("percent_encoding", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\percent-encoding-2.3.2\\src\\lib.rs", Edition2018) }
+   0.640181400s  INFO prepare_target{force=false package_id=percent-encoding v2.3.2 target="percent_encoding"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.643478200s  INFO prepare_target{force=false package_id=serde v1.0.229 target="serde"}: cargo::core::compiler::fingerprint: fingerprint dirty for serde v1.0.229/Check { test: false }/TargetInner { ..: lib_target("serde", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.229\\src\\lib.rs", Edition2021) }
+   0.643503600s  INFO prepare_target{force=false package_id=serde v1.0.229 target="serde"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.648215400s  INFO prepare_target{force=false package_id=serde_core v1.0.229 target="serde_core"}: cargo::core::compiler::fingerprint: fingerprint dirty for serde_core v1.0.229/Check { test: false }/TargetInner { ..: lib_target("serde_core", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_core-1.0.229\\src\\lib.rs", Edition2021) }
+   0.648242000s  INFO prepare_target{force=false package_id=serde_core v1.0.229 target="serde_core"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.669123600s  INFO prepare_target{force=false package_id=serde_json v1.0.151 target="serde_json"}: cargo::core::compiler::fingerprint: fingerprint dirty for serde_json v1.0.151/Check { test: false }/TargetInner { ..: lib_target("serde_json", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.151\\src\\lib.rs", Edition2021) }
+   0.669182500s  INFO prepare_target{force=false package_id=serde_json v1.0.151 target="serde_json"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.673540000s  INFO prepare_target{force=false package_id=itoa v1.0.18 target="itoa"}: cargo::core::compiler::fingerprint: fingerprint dirty for itoa v1.0.18/Check { test: false }/TargetInner { ..: lib_target("itoa", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\itoa-1.0.18\\src\\lib.rs", Edition2021) }
+   0.673581100s  INFO prepare_target{force=false package_id=itoa v1.0.18 target="itoa"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.718920600s  INFO prepare_target{force=false package_id=zmij v1.0.23 target="zmij"}: cargo::core::compiler::fingerprint: fingerprint dirty for zmij v1.0.23/Check { test: false }/TargetInner { ..: lib_target("zmij", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zmij-1.0.23\\src\\lib.rs", Edition2021) }
+   0.718966300s  INFO prepare_target{force=false package_id=zmij v1.0.23 target="zmij"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.723170100s  INFO prepare_target{force=false package_id=sha2 v0.10.9 target="sha2"}: cargo::core::compiler::fingerprint: fingerprint dirty for sha2 v0.10.9/Check { test: false }/TargetInner { ..: lib_target("sha2", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\sha2-0.10.9\\src\\lib.rs", Edition2018) }
+   0.723196300s  INFO prepare_target{force=false package_id=sha2 v0.10.9 target="sha2"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.727083000s  INFO prepare_target{force=false package_id=cpufeatures v0.2.17 target="cpufeatures"}: cargo::core::compiler::fingerprint: fingerprint dirty for cpufeatures v0.2.17/Check { test: false }/TargetInner { ..: lib_target("cpufeatures", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\src\\lib.rs", Edition2018) }
+   0.727114000s  INFO prepare_target{force=false package_id=cpufeatures v0.2.17 target="cpufeatures"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.739543200s  INFO prepare_target{force=false package_id=smol v2.0.2 target="smol"}: cargo::core::compiler::fingerprint: fingerprint dirty for smol v2.0.2/Check { test: false }/TargetInner { ..: lib_target("smol", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\smol-2.0.2\\src\\lib.rs", Edition2018) }
+   0.739593600s  INFO prepare_target{force=false package_id=smol v2.0.2 target="smol"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.743522400s  INFO prepare_target{force=false package_id=async-channel v2.5.0 target="async_channel"}: cargo::core::compiler::fingerprint: fingerprint dirty for async-channel v2.5.0/Check { test: false }/TargetInner { ..: lib_target("async_channel", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-channel-2.5.0\\src\\lib.rs", Edition2021) }
+   0.743548500s  INFO prepare_target{force=false package_id=async-channel v2.5.0 target="async_channel"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.747303300s  INFO prepare_target{force=false package_id=concurrent-queue v2.5.0 target="concurrent_queue"}: cargo::core::compiler::fingerprint: fingerprint dirty for concurrent-queue v2.5.0/Check { test: false }/TargetInner { name_inferred: true, benched: false, ..: lib_target("concurrent_queue", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\concurrent-queue-2.5.0\\src\\lib.rs", Edition2021) }
+   0.747327000s  INFO prepare_target{force=false package_id=concurrent-queue v2.5.0 target="concurrent_queue"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.755124200s  INFO prepare_target{force=false package_id=async-executor v1.14.0 target="async_executor"}: cargo::core::compiler::fingerprint: fingerprint dirty for async-executor v1.14.0/Check { test: false }/TargetInner { ..: lib_target("async_executor", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-executor-1.14.0\\src\\lib.rs", Edition2021) }
+   0.755161600s  INFO prepare_target{force=false package_id=async-executor v1.14.0 target="async_executor"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.759155300s  INFO prepare_target{force=false package_id=async-task v4.7.1 target="async_task"}: cargo::core::compiler::fingerprint: fingerprint dirty for async-task v4.7.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("async_task", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-task-4.7.1\\src\\lib.rs", Edition2021) }
+   0.759194300s  INFO prepare_target{force=false package_id=async-task v4.7.1 target="async_task"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.762517200s  INFO prepare_target{force=false package_id=fastrand v2.5.0 target="fastrand"}: cargo::core::compiler::fingerprint: fingerprint dirty for fastrand v2.5.0/Check { test: false }/TargetInner { ..: lib_target("fastrand", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fastrand-2.5.0\\src\\lib.rs", Edition2018) }
+   0.762556900s  INFO prepare_target{force=false package_id=fastrand v2.5.0 target="fastrand"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.777398700s  INFO prepare_target{force=false package_id=futures-lite v2.6.1 target="futures_lite"}: cargo::core::compiler::fingerprint: fingerprint dirty for futures-lite v2.6.1/Check { test: false }/TargetInner { ..: lib_target("futures_lite", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-lite-2.6.1\\src\\lib.rs", Edition2021) }
+   0.777443600s  INFO prepare_target{force=false package_id=futures-lite v2.6.1 target="futures_lite"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.781817500s  INFO prepare_target{force=false package_id=async-fs v2.2.0 target="async_fs"}: cargo::core::compiler::fingerprint: fingerprint dirty for async-fs v2.2.0/Check { test: false }/TargetInner { ..: lib_target("async_fs", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-fs-2.2.0\\src\\lib.rs", Edition2021) }
+   0.781852700s  INFO prepare_target{force=false package_id=async-fs v2.2.0 target="async_fs"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.786110000s  INFO prepare_target{force=false package_id=blocking v1.7.0 target="blocking"}: cargo::core::compiler::fingerprint: fingerprint dirty for blocking v1.7.0/Check { test: false }/TargetInner { ..: lib_target("blocking", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\blocking-1.7.0\\src\\lib.rs", Edition2021) }
+   0.786154000s  INFO prepare_target{force=false package_id=blocking v1.7.0 target="blocking"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.790499800s  INFO prepare_target{force=false package_id=piper v0.2.5 target="piper"}: cargo::core::compiler::fingerprint: fingerprint dirty for piper v0.2.5/Check { test: false }/TargetInner { ..: lib_target("piper", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\piper-0.2.5\\src\\lib.rs", Edition2018) }
+   0.790542900s  INFO prepare_target{force=false package_id=piper v0.2.5 target="piper"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.793933200s  INFO prepare_target{force=false package_id=atomic-waker v1.1.2 target="atomic_waker"}: cargo::core::compiler::fingerprint: fingerprint dirty for atomic-waker v1.1.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("atomic_waker", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\atomic-waker-1.1.2\\src\\lib.rs", Edition2018) }
+   0.793957000s  INFO prepare_target{force=false package_id=atomic-waker v1.1.2 target="atomic_waker"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.798228900s  INFO prepare_target{force=false package_id=async-io v2.6.0 target="async_io"}: cargo::core::compiler::fingerprint: fingerprint dirty for async-io v2.6.0/Check { test: false }/TargetInner { ..: lib_target("async_io", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-io-2.6.0\\src\\lib.rs", Edition2021) }
+   0.798251900s  INFO prepare_target{force=false package_id=async-io v2.6.0 target="async_io"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.803878300s  INFO prepare_target{force=false package_id=polling v3.11.0 target="polling"}: cargo::core::compiler::fingerprint: fingerprint dirty for polling v3.11.0/Check { test: false }/TargetInner { ..: lib_target("polling", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\polling-3.11.0\\src\\lib.rs", Edition2021) }
+   0.803918300s  INFO prepare_target{force=false package_id=polling v3.11.0 target="polling"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.812228300s  INFO prepare_target{force=false package_id=rustix v1.1.5 target="rustix"}: cargo::core::compiler::fingerprint: fingerprint dirty for rustix v1.1.5/Check { test: false }/TargetInner { ..: lib_target("rustix", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustix-1.1.5\\src\\lib.rs", Edition2021) }
+   0.812258200s  INFO prepare_target{force=false package_id=rustix v1.1.5 target="rustix"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.815880000s  INFO prepare_target{force=false package_id=errno v0.3.14 target="errno"}: cargo::core::compiler::fingerprint: fingerprint dirty for errno v0.3.14/Check { test: false }/TargetInner { ..: lib_target("errno", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\errno-0.3.14\\src\\lib.rs", Edition2018) }
+   0.815904100s  INFO prepare_target{force=false package_id=errno v0.3.14 target="errno"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.820199000s  INFO prepare_target{force=false package_id=async-net v2.0.0 target="async_net"}: cargo::core::compiler::fingerprint: fingerprint dirty for async-net v2.0.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("async_net", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-net-2.0.0\\src\\lib.rs", Edition2021) }
+   0.820242900s  INFO prepare_target{force=false package_id=async-net v2.0.0 target="async_net"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.825009900s  INFO prepare_target{force=false package_id=async-process v2.5.0 target="async_process"}: cargo::core::compiler::fingerprint: fingerprint dirty for async-process v2.5.0/Check { test: false }/TargetInner { ..: lib_target("async_process", ["lib"], "C:\\Users\\stud\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-process-2.5.0\\src\\lib.rs", Edition2021) }
+   0.825061000s  INFO prepare_target{force=false package_id=async-process v2.5.0 target="async_process"}: cargo::core::compiler::fingerprint:     dirty: PathToSourceChanged
+   0.828356800s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint: fingerprint error for specodezhda_management v0.1.0 (E:\specodezhda_management)/Check { test: true }/TargetInner { name: "specodezhda_management", doc: true, ..: with_path("E:\\specodezhda_management\\src\\main.rs", Edition2024) }
+   0.828384900s  INFO prepare_target{force=false package_id=specodezhda_management v0.1.0 (E:\specodezhda_management) target="specodezhda_management"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\specodezhda_management\target\debug\.fingerprint\specodezhda_management-06cfb3f6811d8fd3\test-bin-specodezhda_management`
+
+Caused by:
+    Не удается найти указанный файл. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_libgit2_prerelease
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: git_midx_writer_dump
+  16: git_filter_source_repo
+  17: git_midx_writer_dump
+  18: BaseThreadInitThunk
+  19: RtlUserThreadStart
+    Checking pin-project-lite v0.2.17
+    Checking parking v2.2.1
+    Checking futures-core v0.3.34
+    Checking futures-io v0.3.34
+    Checking cfg-if v1.0.5
+    Checking windows-link v0.2.1
+    Checking fastrand v2.5.0
+    Checking bitflags v2.13.2
+    Checking crossbeam-utils v0.8.23
+    Checking slab v0.4.12
+    Checking atomic-waker v1.1.2
+    Checking async-task v4.7.1
+    Checking typenum v1.20.1
+    Checking windows-sys v0.61.2
+    Checking event-listener v5.4.2
+    Checking serde_core v1.0.229
+    Checking getrandom v0.4.3
+    Checking subtle v2.6.1
+    Checking foldhash v0.2.0
+    Checking memchr v2.8.3
+    Checking futures-lite v2.6.1
+    Checking piper v0.2.5
+    Checking num-conv v0.2.2
+    Checking uuid v1.26.1
+    Checking hashbrown v0.17.1
+    Checking event-listener-strategy v0.5.4
+    Checking futures-task v0.3.34
+    Checking deranged v0.5.8
+    Checking powerfmt v0.2.0
+    Checking async-lock v3.4.2
+    Checking concurrent-queue v2.5.0
+    Checking time-core v0.1.9
+    Checking libsqlite3-sys v0.38.2
+    Checking zmij v1.0.23
+    Checking async-channel v2.5.0
+    Checking itoa v1.0.18
+    Checking futures-util v0.3.34
+    Checking percent-encoding v2.3.2
+    Checking generic-array v0.14.7
+    Checking mime v0.3.17
+    Checking smallvec v1.16.2
+    Checking cpufeatures v0.2.17
+    Checking fallible-iterator v0.3.0
+    Checking byte_reader v3.1.1
+    Checking fallible-streaming-iterator v0.1.9
+    Checking hashlink v0.12.2
+    Checking blocking v1.7.0
+    Checking async-executor v1.14.0
+    Checking unicase v2.9.0
+    Checking crossbeam-channel v0.5.17
+    Checking futures-channel v0.3.34
+    Checking async-fs v2.2.0
+    Checking base64 v0.22.1
+    Checking mime_guess v2.0.5
+    Checking crypto-common v0.1.7
+    Checking block-buffer v0.10.4
+    Checking time v0.3.55
+    Checking digest v0.10.7
+    Checking hmac v0.12.1
+    Checking sha2 v0.10.9
+    Checking serde v1.0.229
+    Checking serde_json v1.0.151
+    Checking errno v0.3.14
+    Checking polling v3.11.0
+    Checking ctrlc v3.5.2
+    Checking rustix v1.1.5
+    Checking ohkami_lib v0.24.9
+    Checking async-io v2.6.0
+    Checking async-process v2.5.0
+    Checking async-net v2.0.0
+    Checking rusqlite v0.40.2
+    Checking smol v2.0.2
+    Checking ohkami v0.24.9
+    Checking async-sqlite v0.6.0
+    Checking specodezhda_management v0.1.0 (E:\specodezhda_management)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 8.50s

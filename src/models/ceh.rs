@@ -1,44 +1,63 @@
-use time::UtcDateTime;
-use uuid::Uuid;
+use std::fmt;
 
-#[doc = "Цех. Поля:
-        - идентификатор цеха
-        - наименование цеха
-        - Ф.И.О. начальника цеха
-        - дата создания
-        - дата обновления
-        - дата удаления"]
+use crate::models::value_objects::{
+    EntityId, EntityIdError, FormatOptions, Name, NameError, RecordLifetime, RecordLifetimeError,
+};
+
+#[derive(Debug)]
 pub struct Ceh {
-    pub(crate) id: Uuid,
-    pub(crate) name: String,
-    pub(crate) nachalnik: String,
-    pub(crate) created_at: UtcDateTime,
-    pub(crate) updated_at: Option<UtcDateTime>,
-    pub(crate) deleted_at: Option<UtcDateTime>,
+    pub(crate) id: EntityId,
+    pub(crate) name: Name,
+    pub(crate) nachalnik: Name,
+    pub(crate) record_lifetime: RecordLifetime,
+}
+
+#[derive(Debug)]
+pub enum CehError {
+    IdError(EntityIdError),
+    NameError(NameError),
+    NachalnikError(NameError),
+    RecordLifetimeError(RecordLifetimeError),
+}
+
+impl fmt::Display for CehError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            CehError::IdError(e) => write!(f, "id error: {}", e),
+            CehError::NameError(e) => write!(f, "name error: {}", e),
+            CehError::NachalnikError(e) => write!(f, "nachalnik error: {}", e),
+            CehError::RecordLifetimeError(e) => write!(f, "record_lifetime error: {}", e),
+        }
+    }
+}
+
+impl std::error::Error for CehError {}
+
+impl From<EntityIdError> for CehError {
+    fn from(e: EntityIdError) -> Self { CehError::IdError(e) }
+}
+impl From<NameError> for CehError {
+    fn from(e: NameError) -> Self { CehError::NameError(e) }
+}
+impl From<RecordLifetimeError> for CehError {
+    fn from(e: RecordLifetimeError) -> Self { CehError::RecordLifetimeError(e) }
 }
 
 impl Ceh {
-    pub fn create(
-        id: Uuid,
-        name: String,
-        nachalnik: String,
-        created_at: UtcDateTime,
-        updated_at: Option<UtcDateTime>,
-        deleted_at: Option<UtcDateTime>,
-    ) -> Self {
-        Self {
-            id,
-            name,
-            nachalnik,
-            created_at,
-            updated_at,
-            deleted_at,
-        }
+    pub fn create_new(name: String, nachalnik: String) -> Result<Self, CehError> {
+        let id = EntityId::new();
+        let name = Name::new_with_format(name, vec![FormatOptions::Trim])?;
+        let nachalnik = Name::new_with_format(nachalnik, vec![FormatOptions::Trim])?;
+        let record_lifetime = RecordLifetime::create(time::UtcDateTime::now(), None, None)?;
+        Ok(Self { id, name, nachalnik, record_lifetime })
     }
 
-    pub fn create_new(name: String, nachalnik: String) -> Self {
-        let id = Uuid::new_v4();
-        let created_at = UtcDateTime::now();
-        Self::create(id, name, nachalnik, created_at, None, None)
+    pub fn create(
+        id: EntityId,
+        name: Name,
+        nachalnik: Name,
+        record_lifetime: RecordLifetime,
+    ) -> Self {
+        Self { id, name, nachalnik, record_lifetime }
     }
 }

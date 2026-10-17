@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-use ohkami::{Response, Status};
-
-pub async fn add_rabotnik() -> Response {
-    let mut response = Response::new(Status::OK);
-    response.set_text("added rabotnik");
-    response
-}
-
-pub async fn get_rabotnik() -> Response {
-    let mut response = Response::new(Status::OK);
-    response.set_text("got rabotnik");
-    response
-}
-
-pub async fn update_rabotnik() -> Response {
-    let mut response = Response::new(Status::OK);
-    response.set_text("updated rabotnik");
-    response
-}
-
-pub async fn remove_rabotnik() -> Response {
-    let mut response = Response::new(Status::OK);
-    response.set_text("removed rabotnik");
-    response
-}
-=======
 use ohkami::{Json, Response};
 use ohkami::fang::Context;
 use ohkami::claw::Path;
@@ -33,49 +6,51 @@ use uuid::Uuid;
 use crate::context::RequestContext;
 use crate::contracts::RabotnikStorage;
 use crate::contracts_impl::RabotnikSqliteStorage;
-use crate::models::Rabotnik;
+use crate::models::{EntityId, Name, Rabotnik, Skidka};
 
-use super::payloads::{
-    AddRabotnikPayload, UpdateRabotnikPayload, RabotnikResponse, ErrorResponse,
-};
+use super::payloads::{AddRabotnikPayload, UpdateRabotnikPayload, RabotnikResponse, ErrorResponse};
 
-//POST
 pub async fn add_rabotnik(
     Json(payload): Json<AddRabotnikPayload>,
     Context(context): Context<'_, RequestContext>,
 ) -> Response {
-    let Ok(ceh_id) = Uuid::parse_str(&payload.ceh_id) else {
+    let Ok(ceh_uuid) = Uuid::parse_str(&payload.ceh_id) else {
         return Response::BadRequest().with_json(ErrorResponse {
             message: "invalid ceh_id".to_string(),
         });
     };
-
-    let ceh_stub = crate::models::Ceh {
-        id: ceh_id,
-        name: String::new(),
-        nachalnik: String::new(),
-        created_at: time::UtcDateTime::now(),
-        updated_at: None,
-        deleted_at: None,
+    let ceh_id = match EntityId::create(ceh_uuid) {
+        Ok(id) => id,
+        Err(e) => {
+            return Response::BadRequest().with_json(ErrorResponse {
+                message: format!("ceh_id error: {:?}", e),
+            })
+        }
     };
 
-    let rabotnik = Rabotnik::create_new(
+    let rabotnik = match Rabotnik::create_new(
         payload.fio,
         payload.dolzhnost,
         payload.skidka,
-        &ceh_stub,
-    );
+        ceh_id,
+    ) {
+        Ok(r) => r,
+        Err(e) => {
+            return Response::BadRequest().with_json(ErrorResponse {
+                message: format!("validation error: {:?}", e),
+            });
+        }
+    };
 
     let response_payload = RabotnikResponse {
-        id: rabotnik.id.to_string(),
-        fio: rabotnik.fio.clone(),
-        dolzhnost: rabotnik.dolzhnost.clone(),
-        skidka: rabotnik.skidka,
-        ceh_id: rabotnik.ceh_id.to_string(),
+        id: rabotnik.id.value().to_string(),
+        fio: rabotnik.fio.value().to_string(),
+        dolzhnost: rabotnik.dolzhnost.value().to_string(),
+        skidka: rabotnik.skidka.value(),
+        ceh_id: rabotnik.ceh_id.value().to_string(),
     };
 
     let storage = RabotnikSqliteStorage::from_pool((*context.connection_pool).clone());
-
     match storage.add(rabotnik).await {
         Ok(()) => Response::Created().with_json(response_payload),
         Err(error) => {
@@ -87,7 +62,6 @@ pub async fn add_rabotnik(
     }
 }
 
-//GET
 pub async fn get_rabotnik(
     Path(id): Path<&str>,
     Context(context): Context<'_, RequestContext>,
@@ -99,14 +73,13 @@ pub async fn get_rabotnik(
     };
 
     let storage = RabotnikSqliteStorage::from_pool((*context.connection_pool).clone());
-
     match storage.get(id).await {
         Ok(Some(r)) => Response::OK().with_json(RabotnikResponse {
-            id: r.id.to_string(),
-            fio: r.fio,
-            dolzhnost: r.dolzhnost,
-            skidka: r.skidka,
-            ceh_id: r.ceh_id.to_string(),
+            id: r.id.value().to_string(),
+            fio: r.fio.value().to_string(),
+            dolzhnost: r.dolzhnost.value().to_string(),
+            skidka: r.skidka.value(),
+            ceh_id: r.ceh_id.value().to_string(),
         }),
         Ok(None) => Response::NotFound().with_json(ErrorResponse {
             message: "rabotnik not found".to_string(),
@@ -120,7 +93,6 @@ pub async fn get_rabotnik(
     }
 }
 
-//PUT
 pub async fn update_rabotnik(
     Path(id): Path<&str>,
     Json(payload): Json<UpdateRabotnikPayload>,
@@ -131,15 +103,21 @@ pub async fn update_rabotnik(
             message: "invalid rabotnik id".to_string(),
         });
     };
-
-    let Ok(ceh_id) = Uuid::parse_str(&payload.ceh_id) else {
+    let Ok(ceh_uuid) = Uuid::parse_str(&payload.ceh_id) else {
         return Response::BadRequest().with_json(ErrorResponse {
             message: "invalid ceh_id".to_string(),
         });
     };
+    let ceh_id = match EntityId::create(ceh_uuid) {
+        Ok(id) => id,
+        Err(e) => {
+            return Response::BadRequest().with_json(ErrorResponse {
+                message: format!("ceh_id error: {:?}", e),
+            })
+        }
+    };
 
     let storage = RabotnikSqliteStorage::from_pool((*context.connection_pool).clone());
-
     let existing = match storage.get(id).await {
         Ok(Some(r)) => r,
         Ok(None) => {
@@ -155,24 +133,47 @@ pub async fn update_rabotnik(
         }
     };
 
+    let fio = match Name::new(payload.fio) {
+        Ok(n) => n,
+        Err(e) => {
+            return Response::BadRequest().with_json(ErrorResponse {
+                message: format!("fio error: {:?}", e),
+            })
+        }
+    };
+    let dolzhnost = match Name::new(payload.dolzhnost) {
+        Ok(n) => n,
+        Err(e) => {
+            return Response::BadRequest().with_json(ErrorResponse {
+                message: format!("dolzhnost error: {:?}", e),
+            })
+        }
+    };
+    let skidka = match Skidka::new(payload.skidka) {
+        Ok(s) => s,
+        Err(e) => {
+            return Response::BadRequest().with_json(ErrorResponse {
+                message: format!("skidka error: {:?}", e),
+            })
+        }
+    };
+
     let updated = Rabotnik {
         id: existing.id,
-        fio: payload.fio,
-        dolzhnost: payload.dolzhnost,
-        skidka: payload.skidka,
+        fio,
+        dolzhnost,
+        skidka,
         ceh_id,
-        created_at: existing.created_at,
-        updated_at: Some(time::UtcDateTime::now()),
-        deleted_at: existing.deleted_at,
+        record_lifetime: existing.record_lifetime,
     };
 
     match storage.update(&updated).await {
         Ok(()) => Response::OK().with_json(RabotnikResponse {
-            id: updated.id.to_string(),
-            fio: updated.fio,
-            dolzhnost: updated.dolzhnost,
-            skidka: updated.skidka,
-            ceh_id: updated.ceh_id.to_string(),
+            id: updated.id.value().to_string(),
+            fio: updated.fio.value().to_string(),
+            dolzhnost: updated.dolzhnost.value().to_string(),
+            skidka: updated.skidka.value(),
+            ceh_id: updated.ceh_id.value().to_string(),
         }),
         Err(error) => {
             eprintln!("Ошибка обновления работника: {error}");
@@ -183,7 +184,6 @@ pub async fn update_rabotnik(
     }
 }
 
-//DELETE
 pub async fn remove_rabotnik(
     Path(id): Path<&str>,
     Context(context): Context<'_, RequestContext>,
@@ -195,7 +195,6 @@ pub async fn remove_rabotnik(
     };
 
     let storage = RabotnikSqliteStorage::from_pool((*context.connection_pool).clone());
-
     let existing = match storage.get(id).await {
         Ok(Some(r)) => r,
         Ok(None) => {
@@ -221,4 +220,3 @@ pub async fn remove_rabotnik(
         }
     }
 }
->>>>>>> dcb3657 (7)

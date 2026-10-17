@@ -4,6 +4,7 @@ use async_sqlite::{Pool, PoolBuilder};
 use rusqlite::{params_from_iter, types::Value};
 
 use crate::contracts::CehStorage;
+use crate::models::value_objects::{EntityId, Name, RecordLifetime};
 use crate::models::Ceh;
 
 pub struct CehSqliteStorage {
@@ -17,8 +18,8 @@ impl CehSqliteStorage {
             .path(path_buf)
             .journal_mode(async_sqlite::JournalMode::Wal)
             .num_conns(10);
-        let connection = builder.open().await.expect("Database creation error");
-        Self { connection }
+        let pool: Pool = builder.open().await.expect("Database creation error");
+        Self { connection: pool }
     }
 
     pub fn from_pool(connection: Pool) -> Self {
@@ -32,16 +33,14 @@ impl CehStorage for CehSqliteStorage {
             INSERT INTO ceh (id, name, nachalnik, created_at, updated_at, deleted_at)
             VALUES (?1, ?2, ?3, ?4, ?5, ?6)
         ";
-
         let parameters: Vec<Value> = vec![
-            ceh.id.into(),
-            ceh.name.into(),
-            ceh.nachalnik.into(),
-            ceh.created_at.to_string().into(),
-            ceh.updated_at.map(|dt| dt.to_string()).into(),
-            ceh.deleted_at.map(|dt| dt.to_string()).into(),
+            ceh.id.value().into(),
+            ceh.name.value().to_string().into(),
+            ceh.nachalnik.value().to_string().into(),
+            ceh.record_lifetime.created_at().to_string().into(),
+            ceh.record_lifetime.updated_at().map(|dt| dt.to_string()).into(),
+            ceh.record_lifetime.deleted_at().map(|dt| dt.to_string()).into(),
         ];
-
         self.connection
             .conn(move |connection| {
                 connection.execute(QUERY, params_from_iter(parameters))?;
@@ -62,7 +61,7 @@ impl CehStorage for CehSqliteStorage {
             .connection
             .conn(move |connection| {
                 let result = connection.query_row(QUERY, params_from_iter(parameters), |row| {
-                    let id: uuid::Uuid = row.get(0)?;
+                    let id: String = row.get(0)?;
                     let name: String = row.get(1)?;
                     let nachalnik: String = row.get(2)?;
                     let created_at: String = row.get(3)?;
@@ -76,22 +75,23 @@ impl CehStorage for CehSqliteStorage {
 
         match row {
             Ok((id, name, nachalnik, created_at, updated_at, deleted_at)) => {
-                use time::UtcDateTime;
                 use time::format_description::well_known::Rfc3339;
-                Ok(Some(Ceh {
-                    id,
-                    name,
-                    nachalnik,
-                    created_at: UtcDateTime::parse(&created_at, &Rfc3339)?,
-                    updated_at: match updated_at {
+                use time::UtcDateTime;
+                let id = EntityId::create(uuid::Uuid::parse_str(&id)?)?;
+                let name = Name::new(name)?;
+                let nachalnik = Name::new(nachalnik)?;
+                let record_lifetime = RecordLifetime::create(
+                    UtcDateTime::parse(&created_at, &Rfc3339)?,
+                    match updated_at {
                         Some(s) => Some(UtcDateTime::parse(&s, &Rfc3339)?),
                         None => None,
                     },
-                    deleted_at: match deleted_at {
+                    match deleted_at {
                         Some(s) => Some(UtcDateTime::parse(&s, &Rfc3339)?),
                         None => None,
                     },
-                }))
+                )?;
+                Ok(Some(Ceh { id, name, nachalnik, record_lifetime }))
             }
             Err(rusqlite::Error::QueryReturnedNoRows) => Ok(None),
             Err(e) => Err(Box::new(e)),
@@ -100,7 +100,7 @@ impl CehStorage for CehSqliteStorage {
 
     async fn remove(&self, ceh: Ceh) -> Result<(), Box<dyn std::error::Error>> {
         const QUERY: &str = "DELETE FROM ceh WHERE id = ?1";
-        let parameters: Vec<Value> = vec![ceh.id.into()];
+        let parameters: Vec<Value> = vec![ceh.id.value().into()];
         self.connection
             .conn(move |connection| {
                 connection.execute(QUERY, params_from_iter(parameters))?;
@@ -117,11 +117,11 @@ impl CehStorage for CehSqliteStorage {
             WHERE id = ?5
         ";
         let parameters: Vec<Value> = vec![
-            ceh.name.clone().into(),
-            ceh.nachalnik.clone().into(),
-            ceh.updated_at.map(|dt| dt.to_string()).into(),
-            ceh.deleted_at.map(|dt| dt.to_string()).into(),
-            ceh.id.into(),
+            ceh.name.value().to_string().into(),
+            ceh.nachalnik.value().to_string().into(),
+            ceh.record_lifetime.updated_at().map(|dt| dt.to_string()).into(),
+            ceh.record_lifetime.deleted_at().map(|dt| dt.to_string()).into(),
+            ceh.id.value().into(),
         ];
         self.connection
             .conn(move |connection| {
